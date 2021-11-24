@@ -1,0 +1,124 @@
+* {
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  width: 100vw;
+  height: 100vh;
+}
+
+svg {
+  background: rgba(0, 0, 0, 0.6);
+  margin: 0;
+  cursor: pointer;
+  fill: white;
+  border-radius: 100%;
+}
+
+svg:hover {
+  fill: orange;
+}
+
+.carInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.carInfo img {
+  position: absolute;
+  width: 100vw;
+  object-fit: cover;
+  height: 100%;
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.6);
+  border: 5px solid white;
+  border-radius: 10px;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 2px;
+  margin: 20px;
+  z-index: 10;
+}
+
+button:hover {
+  border-color: orange;
+  color: orange;
+}
+
+.previous {
+  position: absolute;
+  left: 30px;
+}
+
+.next {
+  position: absolute;
+  right: 30px;
+}
+
+.order {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  max-width: 500px;
+}
+
+.order h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.order span {
+  margin: 10px 0 40px;
+  text-align: center;
+}
+
+.order form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.order form label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-weight: bold;
+}
+
+.order form input {
+  margin: 5px 0 20px;
+  min-width: 300px;
+  font-size: 14px;
+  padding: 5px;
+  border-radius: 6px;
+  border: 3px solid white;
+}
+
+.order form input:hover,
+.order form input:active,
+.order form input:focus {
+  border-color: orange;
+}
+
+.order form button {
+  font-size: 16px;
+  width: 200px;
+  margin-top: 50px;
+}
