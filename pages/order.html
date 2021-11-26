@@ -11,24 +11,27 @@
   </head>
   <body>
     <custom-header></custom-header>
-    <div class="order">
-      <h1>Detalhes para encomenda</h1>
-      <span>Após o envio do formulário um email será enviado com o passo a passo a ser seguido para a finalização da encomenda do veículo</span>
-      <form>
-        <label>
-          Nome Completo
-          <input type="text" />
-        </label>
-        <label>
-          Email
-          <input type="text" />
-        </label>
-        <label>
-          CPF
-          <input type="text" />
-        </label>
-        <button>Finalizar</button>
-      </form>
+    <div class="content">
+      <div class="backgroundImage"></div>
+      <div class="order">
+        <h1 id="formTitle">Detalhes para encomenda</h1>
+        <span>Após o envio do formulário um email será enviado com o passo a passo a ser seguido para a finalização da encomenda do veículo</span>
+        <form onsubmit="handleSubmitOrder()" method="dialog">
+          <label>
+            Nome Completo
+            <input type="text" required/>
+          </label>
+          <label>
+            Email
+            <input type="email" required />
+          </label>
+          <label>
+            CPF
+            <input type="text" oninput="maskCPF(this)" required/>
+          </label>
+          <button type="submit">Finalizar</button>
+        </form>
+      </div>
     </div>
   </body>
 </html>

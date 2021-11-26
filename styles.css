@@ -24,23 +24,30 @@ svg:hover {
   fill: orange;
 }
 
-.carInfo {
+.content {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   height: 100%;
 }
 
-.carInfo img {
+.backgroundImage {
   position: absolute;
   width: 100vw;
-  object-fit: cover;
   height: 100%;
 }
+.backgroundImage img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
 
+.orderButton,
 button {
   outline: none;
   cursor: pointer;
+  text-decoration: none;
   background: rgba(0, 0, 0, 0.6);
   border: 5px solid white;
   border-radius: 10px;
@@ -53,6 +60,7 @@ button {
   z-index: 10;
 }
 
+.orderButton:hover,
 button:hover {
   border-color: orange;
   color: orange;
@@ -73,8 +81,11 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  max-width: 500px;
+  max-width: 650px;
+  z-index: 9;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  margin-top: 5%;
 }
 
 .order h1 {
@@ -121,4 +132,70 @@ button:hover {
   font-size: 16px;
   width: 200px;
   margin-top: 50px;
+}
+
+.aboutUs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  max-width: 80%;
+}
+
+.aboutUs .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 40%;
+  padding: 20px;
+  line-height: 25px;
+}
+
+.aboutUs h2 {
+  margin: 0 0 10px;
+}
+
+.aboutUs span {
+  margin-bottom: 30px;
+}
+
+.aboutUs .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 50px;
+  border-bottom: 1px solid rgba(221, 221, 221, 0.3);
+}
+
+.aboutUs .bestSellers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.aboutUs table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  margin: 20px;
+  width: 100%;
+}
+
+.aboutUs td {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.aboutUs th {
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+.aboutUs tr:nth-child(even) {
+  background-color: #ddd;
+  color: black;
 }
